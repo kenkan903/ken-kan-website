@@ -1,45 +1,110 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#050505">
+<meta name="theme-color" content="#000000">
 <title>Ken Kan</title>
-<meta name="description" content="Ken Kan — 我的經驗，就是我的系統。 Proud to be different.">
-<link rel="stylesheet" href="assets/styles.css">
-<script defer src="assets/app.js"></script>
+<meta name="description" content="Ken Kan — Built on Standards, not on Approval.">
+<style>
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+  }
+
+  .hero-stage {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: #000;
+    overflow: hidden;
+  }
+
+  /* Keep the exact 1672×941 composition intact on screen. */
+  .hero-canvas {
+    position: relative;
+    width: min(100vw, calc(100vh * 1672 / 941));
+    height: min(100vh, calc(100vw * 941 / 1672));
+    aspect-ratio: 1672 / 941;
+  }
+
+  .hero-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  /* Invisible clickable regions aligned to the text already baked into the image. */
+  .hotspot {
+    position: absolute;
+    display: block;
+    background: transparent;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .home    { left: 2.3%;  top: 2.0%; width: 10.8%; height: 7.0%; }
+  .about   { left: 64.7%; top: 1.7%; width: 6.8%;  height: 7.2%; }
+  .work    { left: 72.0%; top: 1.7%; width: 5.8%;  height: 7.2%; }
+  .words   { left: 78.5%; top: 1.7%; width: 6.4%;  height: 7.2%; }
+  .now     { left: 85.5%; top: 1.7%; width: 4.7%;  height: 7.2%; }
+  .contact { left: 90.5%; top: 1.7%; width: 8.8%;  height: 7.2%; }
+  .explore { left: 8.9%;  top: 76.4%; width: 14.2%; height: 8.8%; }
+
+  /* SEO/accessibility text without changing the visible design. */
+  .sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  /* On portrait/mobile screens, preserve the artwork rather than crop it. */
+  @media (max-aspect-ratio: 1/1) {
+    body { overflow: auto; }
+    .hero-stage {
+      position: relative;
+      min-height: 100svh;
+    }
+  }
+</style>
 </head>
-<body class="home-page">
+<body>
+<main class="hero-stage">
+  <div class="hero-canvas">
+    <img
+      class="hero-image"
+      src="homepage-master.png"
+      alt="Ken Kan — Built on Standards, not on Approval"
+      width="1672"
+      height="941"
+    >
 
-<header class="site-header">
-  <a class="brand" href="index.html" aria-label="Ken Kan home">KEN KAN</a>
-  <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
-    <span></span><span></span>
-  </button>
-  <nav class="main-nav" aria-label="Primary navigation">
-    <a href="about.html">ABOUT</a>
-    <a href="work.html">WORK</a>
-    <a href="kenos.html">KenOS</a>
-    <a href="words.html">WORDS</a>
-    <a href="now.html">NOW</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
-</header>
+    <h1 class="sr-only">Ken Kan</h1>
+    <p class="sr-only">Built on Standards, not on Approval.</p>
 
-<main class="hero">
-  <div class="hero-spotlight"></div>
-  <div class="hero-image" aria-hidden="true"></div>
-  <div class="hero-left-line"></div>
-
-  <section class="hero-copy" aria-label="Introduction">
-    <h1><span>KEN</span><span>KAN</span></h1>
-    <div class="hero-rule"></div>
-    <p class="hero-cn">我的經驗，就是我的系統。</p>
-    <p class="hero-en">Proud to be different.</p>
-    <a class="enter-link" href="about.html"><span>EXPLORE</span><span class="arrow">→</span></a>
-  </section>
-
-  <div class="hero-index">01 / KEN KAN</div>
+    <a class="hotspot home" href="index.html" aria-label="Ken Kan home"></a>
+    <a class="hotspot about" href="about.html" aria-label="About"></a>
+    <a class="hotspot work" href="work.html" aria-label="Work"></a>
+    <a class="hotspot words" href="words.html" aria-label="Words"></a>
+    <a class="hotspot now" href="now.html" aria-label="Now"></a>
+    <a class="hotspot contact" href="contact.html" aria-label="Contact"></a>
+    <a class="hotspot explore" href="about.html" aria-label="Explore"></a>
+  </div>
 </main>
 </body>
 </html>
