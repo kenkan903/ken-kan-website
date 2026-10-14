@@ -1,47 +1,26 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#000000">
-<title>Ken Kan</title>
-<meta name="description" content="Ken Kan — Built on Standards, not on Approval.">
-<style>
-  * { box-sizing: border-box; }
-  html, body { margin: 0; width: 100%; height: 100%; background: #000; overflow: hidden; }
-  .hero-stage { position: fixed; inset: 0; display: grid; place-items: center; background: #000; overflow: hidden; }
-  .hero-canvas { position: relative; width: min(100vw, calc(100vh * 1672 / 941)); height: min(100vh, calc(100vw * 941 / 1672)); aspect-ratio: 1672 / 941; }
-  .hero-image { display: block; width: 100%; height: 100%; object-fit: contain; user-select: none; -webkit-user-drag: none; }
-  .hotspot { position: absolute; display: block; background: transparent; border: 0; text-decoration: none; cursor: pointer; }
-  /* clickable zones aligned to the approved image */
-  .home    { left: 2.0%; top: 2.0%; width: 12.0%; height: 7.0%; }
-  .about   { left: 67.0%; top: 1.8%; width: 6.0%; height: 6.5%; }
-  .work    { left: 74.2%; top: 1.8%; width: 5.8%; height: 6.5%; }
-  .words   { left: 80.9%; top: 1.8%; width: 6.3%; height: 6.5%; }
-  .now     { left: 88.1%; top: 1.8%; width: 5.0%; height: 6.5%; }
-  .contact { left: 93.5%; top: 1.8%; width: 6.0%; height: 6.5%; }
-  .explore { left: 8.8%; top: 76.0%; width: 15.5%; height: 8.8%; }
-  .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
-  @media (max-aspect-ratio: 1/1) {
-    body { overflow: auto; }
-    .hero-stage { position: relative; min-height: 100svh; }
-  }
-</style>
-</head>
-<body>
-<main class="hero-stage">
-  <div class="hero-canvas">
-    <img class="hero-image" src="homepage-master.png" alt="Ken Kan — Built on Standards, not on Approval" width="1672" height="941">
-    <h1 class="sr-only">Ken Kan</h1>
-    <p class="sr-only">Built on Standards, not on Approval.</p>
-    <a class="hotspot home" href="index.html" aria-label="Ken Kan home"></a>
-    <a class="hotspot about" href="about.html" aria-label="About"></a>
-    <a class="hotspot work" href="work.html" aria-label="Work"></a>
-    <a class="hotspot words" href="words.html" aria-label="Words"></a>
-    <a class="hotspot now" href="now.html" aria-label="Now"></a>
-    <a class="hotspot contact" href="contact.html" aria-label="Contact"></a>
-    <a class="hotspot explore" href="about.html" aria-label="Explore"></a>
-  </div>
-</main>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffffff"><title>Ken Kan</title><meta name="description" content="Ken Kan — Built on Standards, not on Approval."><style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#fff;overflow:hidden}
+.hero-stage{position:fixed;inset:0;display:grid;place-items:center;background:#fff;overflow:hidden}
+.hero-canvas{position:relative;width:min(100vw,calc(100vh * 1672 / 941));height:min(100vh,calc(100vw * 941 / 1672));aspect-ratio:1672/941}
+.hero-image{display:block;width:100%;height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none}
+.hotspot{position:absolute;display:block;background:transparent;border:0;text-decoration:none;cursor:pointer}
+.home{left:2.2%;top:2.1%;width:12.5%;height:7%}
+.about{left:45.3%;top:1.7%;width:6.2%;height:6.8%}
+.work{left:52.6%;top:1.7%;width:6%;height:6.8%}
+.kenos{left:59.5%;top:1.7%;width:6.3%;height:6.8%}
+.words{left:66.8%;top:1.7%;width:6.5%;height:6.8%}
+.now{left:74.2%;top:1.7%;width:5%;height:6.8%}
+.contact{left:80.2%;top:1.7%;width:8%;height:6.8%}
+.explore{left:5.1%;top:79.2%;width:17%;height:9.5%}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-aspect-ratio:1/1){body{overflow:auto}.hero-stage{position:relative;min-height:100svh}}
+</style></head><body><main class="hero-stage"><div class="hero-canvas"><img class="hero-image" src="homepage-master.png" alt="Ken Kan — Built on Standards, not on Approval" width="1672" height="941"><h1 class="sr-only">Ken Kan</h1><p class="sr-only">Built on Standards, not on Approval.</p>
+<a class="hotspot home" href="index.html" aria-label="Ken Kan home"></a>
+<a class="hotspot about" href="about.html" aria-label="About"></a>
+<a class="hotspot work" href="work.html" aria-label="Work"></a>
+<a class="hotspot kenos" href="kenos.html" aria-label="KenOS"></a>
+<a class="hotspot words" href="words.html" aria-label="Words"></a>
+<a class="hotspot now" href="now.html" aria-label="Now"></a>
+<a class="hotspot contact" href="contact.html" aria-label="Contact"></a>
+<a class="hotspot explore" href="about.html" aria-label="Explore"></a>
+</div></main></body></html>
