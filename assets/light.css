@@ -1,0 +1,92 @@
+:root{
+  --paper:#fffdf9;--white:#fff;--ink:#221f1a;--muted:#8d8579;
+  --gold:#b69b68;--gold-dark:#8e7448;--gold-pale:#e9ddc7;
+  --line:#e9e0d2;--shadow:0 18px 55px rgba(87,67,34,.08)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body.light-page{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.light-header{height:82px;display:flex;align-items:center;padding:0 clamp(24px,5vw,76px);border-bottom:1px solid var(--line);background:rgba(255,253,249,.94);backdrop-filter:blur(12px);position:sticky;top:0;z-index:40}
+.light-brand{font-family:Georgia,"Times New Roman",serif;font-size:21px;letter-spacing:.13em;color:var(--gold-dark);white-space:nowrap}
+.light-nav{margin-left:auto;display:flex;gap:clamp(22px,3vw,48px);align-items:center;white-space:nowrap}
+.light-nav a{font-family:Georgia,"Times New Roman",serif;font-size:12px;letter-spacing:.13em;color:#6f675d;position:relative;padding:12px 0}
+.light-nav a:after{content:"";position:absolute;left:0;bottom:6px;width:0;height:1px;background:var(--gold);transition:.25s}
+.light-nav a:hover:after,.light-nav a.active:after{width:100%}
+.light-shell{max-width:1500px;margin:auto;padding:70px clamp(24px,5vw,76px) 90px}
+.light-hero{min-height:48vh;display:grid;grid-template-columns:1.05fr .95fr;gap:7vw;align-items:center;border-bottom:1px solid var(--line);padding:30px 0 68px}
+.light-kicker{font-family:Georgia,serif;color:var(--gold-dark);letter-spacing:.25em;font-size:11px;margin:0 0 22px}
+.light-hero h1{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(58px,8vw,122px);line-height:.88;font-weight:400;letter-spacing:-.045em;color:#a98e5b}
+.light-hero .lead{max-width:650px;margin:30px 0 0;color:var(--muted);line-height:1.9;font-size:17px}
+.cartoon-portrait{position:relative;min-height:430px;display:grid;place-items:center}
+.cartoon-portrait:before{content:"";position:absolute;width:min(420px,82%);aspect-ratio:1;border-radius:50%;background:#f6efe3;border:1px solid var(--gold-pale)}
+.cartoon-frame{position:relative;width:min(500px,96%);aspect-ratio:1/1;overflow:hidden;border-radius:46% 46% 42% 42%;z-index:2}
+.cartoon-frame img{width:185%;height:100%;object-fit:cover;object-position:77% 50%;transform:translateX(-30%);filter:saturate(.92) contrast(.98)}
+.light-section{padding:74px 0;border-bottom:1px solid var(--line)}
+.section-top{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}
+.section-no{font-family:Georgia,serif;color:var(--gold-dark);font-size:11px;letter-spacing:.22em}
+.light-section h2{margin:8px 0 0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(38px,5vw,72px);line-height:.96;font-weight:400;color:#3a332b}
+.section-note{max-width:470px;color:var(--muted);line-height:1.7;font-size:14px}
+.chapter-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.chapter-card{min-height:360px;border:1px solid var(--line);background:#fff;border-radius:22px;padding:22px;display:flex;flex-direction:column;transition:.28s;position:relative;overflow:hidden}
+.chapter-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#dac9a9}
+.chapter-card .mini-art{height:135px;display:grid;place-items:center;margin-bottom:20px;background:linear-gradient(145deg,#fff,#fbf6ed);border-radius:16px}
+.chapter-card .mini-art span{font-family:Georgia,serif;font-size:58px;color:#c3aa7b}
+.chapter-card .n{font-family:Georgia,serif;color:var(--gold-dark);font-size:11px;letter-spacing:.18em}
+.chapter-card h3{font-family:"Noto Serif TC",Georgia,serif;font-size:20px;font-weight:500;margin:10px 0 6px;line-height:1.35}
+.chapter-card h4{font-family:Georgia,serif;font-size:13px;color:#9a865f;font-weight:400;margin:0 0 12px;line-height:1.35}
+.chapter-card p{font-size:13px;color:var(--muted);line-height:1.65;margin:0}
+.chapter-card .go{margin-top:auto;padding-top:18px;color:var(--gold-dark);font-size:18px}
+.work-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:16px}
+.work-card{min-height:260px;border:1px solid var(--line);border-radius:24px;padding:28px;background:#fff;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:.28s}
+.work-card.flagship{grid-row:span 2;min-height:536px;background:linear-gradient(160deg,#fff 0%,#faf5eb 100%)}
+.work-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.work-card .tag{font-family:Georgia,serif;font-size:10px;letter-spacing:.2em;color:var(--gold-dark)}
+.work-card h3{font-family:Georgia,serif;font-size:clamp(28px,3vw,48px);font-weight:400;margin:16px 0 12px}
+.work-card p{color:var(--muted);line-height:1.7;font-size:14px;max-width:500px}
+.work-card .mark{margin-top:auto;font-family:Georgia,serif;font-size:74px;color:#d5c29c;align-self:flex-end}
+.words-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:26px}
+.word-list{border-top:1px solid var(--line)}
+.word-item{display:grid;grid-template-columns:90px 1fr auto;gap:22px;padding:26px 0;border-bottom:1px solid var(--line);align-items:center}
+.word-item .type{font-family:Georgia,serif;color:var(--gold-dark);font-size:10px;letter-spacing:.18em}
+.word-item h3{margin:0;font-family:Georgia,serif;font-size:clamp(22px,2.6vw,36px);font-weight:400}
+.word-item .arrow{color:var(--gold-dark);font-size:20px}
+.quote-panel{border:1px solid var(--line);border-radius:28px;padding:34px;background:#fff;min-height:360px;display:flex;flex-direction:column;justify-content:space-between}
+.quote-panel blockquote{font-family:Georgia,serif;font-size:clamp(31px,4vw,56px);line-height:1.06;color:#a98e5b;margin:0}
+.quote-panel small{color:var(--muted);line-height:1.6}
+.now-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.now-card{border:1px solid var(--line);border-radius:22px;background:#fff;padding:24px;min-height:210px;display:flex;flex-direction:column}
+.now-card span{font-family:Georgia,serif;color:var(--gold-dark);font-size:10px;letter-spacing:.18em}
+.now-card strong{font-family:Georgia,serif;font-size:28px;font-weight:400;margin-top:auto}
+.now-card p{color:var(--muted);font-size:13px;line-height:1.65;margin:12px 0 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-card{border:1px solid var(--line);border-radius:24px;background:#fff;padding:30px;min-height:180px;display:flex;align-items:flex-end;justify-content:space-between;transition:.25s}
+.contact-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.contact-card span{font-family:Georgia,serif;color:var(--gold-dark);font-size:10px;letter-spacing:.18em}
+.contact-card strong{display:block;font-family:Georgia,serif;font-size:30px;font-weight:400;margin-top:12px}
+.kenos-map{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.kenos-node{border:1px solid var(--line);border-radius:20px;background:#fff;padding:26px;text-align:center}
+.kenos-node strong{font-family:Georgia,serif;font-size:28px;font-weight:400;color:var(--gold-dark)}
+.kenos-node small{display:block;color:var(--muted);margin-top:9px;line-height:1.5}
+.light-footer{display:flex;gap:24px;align-items:center;padding:34px clamp(24px,5vw,76px) 50px;max-width:1500px;margin:auto;color:#9a9185;font-family:Georgia,serif;font-size:10px;letter-spacing:.16em}
+.light-footer .rule{height:1px;background:var(--line);flex:1}
+.chapter-page{max-width:1120px;margin:auto;padding:90px clamp(24px,6vw,80px)}
+.chapter-page .back{font-family:Georgia,serif;color:var(--gold-dark);letter-spacing:.12em;font-size:12px}
+.chapter-page h1{font-family:"Noto Serif TC",Georgia,serif;font-size:clamp(45px,7vw,82px);font-weight:400;line-height:1.04;margin:55px 0 14px}
+.chapter-page h2{font-family:Georgia,serif;font-weight:400;color:#9a865f;margin:0 0 42px}
+.chapter-page .intro{font-family:Georgia,"Noto Serif TC",serif;font-size:20px;line-height:1.95;color:#625b51;max-width:820px}
+.chapter-page .chapter-visual{margin-top:55px;height:300px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,#fff,#f8f1e6);overflow:hidden;position:relative}
+.chapter-page .chapter-visual:after{content:"KEN KAN";position:absolute;right:28px;bottom:20px;font-family:Georgia,serif;letter-spacing:.16em;color:#c6ad80;font-size:12px}
+@media(max-width:1050px){
+  .light-hero{grid-template-columns:1fr}.cartoon-portrait{min-height:340px}
+  .chapter-grid{grid-template-columns:repeat(2,1fr)}
+  .work-grid{grid-template-columns:1fr 1fr}.work-card.flagship{grid-row:auto;grid-column:1/-1;min-height:420px}
+  .words-grid{grid-template-columns:1fr}.now-grid{grid-template-columns:1fr 1fr}.kenos-map{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+  .light-header{height:70px;overflow:auto}.light-nav{gap:22px;margin-left:32px}
+  .light-shell{padding-top:35px}.light-hero{min-height:auto;padding-top:20px}
+  .chapter-grid,.work-grid,.now-grid,.contact-grid,.kenos-map{grid-template-columns:1fr}
+  .work-card.flagship{grid-column:auto}.word-item{grid-template-columns:64px 1fr auto}
+  .cartoon-frame{width:95%}
+}
